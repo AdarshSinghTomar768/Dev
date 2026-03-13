@@ -12,11 +12,15 @@ const schema = zod.array(zod.number());
 // country : string => must be one of the following: USA, Canada, UK, Australia
 // }
 
+
+/*
 const userSchema = zod.object({
     email: zod.string().email(),
     password: zod.string().min(8).max(20).regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/),
     country: zod.enum(["USA", "Canada", "UK", "Australia"])
 })
+*/
+
 
 app.post('/health-checkup',function(req,res){
     const kidneys = req.body.kidneys;
